@@ -14,7 +14,7 @@ class Board
     @grid[row][column]
   end
 
-  def []=(pos, value)
+  def []=(pos, value) #unsure whether we need
     row,column = pos
     @grid[row][column] = value
   end

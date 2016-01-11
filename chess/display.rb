@@ -7,7 +7,16 @@ class Display
   def initialize(board)
     @board = board
     @cursor_pos = [0, 0]
+    @selected = false
   end
+
+  def show_board
+  end
+
+  def move_cursor
+  end
+
+
 
 
 end
