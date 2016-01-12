@@ -4,6 +4,10 @@ require_relative 'stepping_piece'
 
 class King < SteppingPiece
 
+  def initialize(position, color, board)
+    super(position, color, board)
+    @icon =  "\u265F".encode('utf-8')
+  end
 
   MOVES = [
     [0,1],
@@ -20,14 +24,5 @@ class King < SteppingPiece
     MOVES
   end
 
-  def to_s
-    king = "\u265A"
-    case @color
-    when :red
-      " " + king.encode('utf-8').colorize(:red) + " "
-    when :black
-      " " + king.encode('utf-8').colorize(:black) + " "
-    end
-  end
 
 end

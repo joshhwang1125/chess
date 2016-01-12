@@ -9,6 +9,19 @@ class Piece
     @board = board # should we be able to alter the board with our piece class
     #  @alive = true #unsure whether we need
     @null = false
+    @icon = " "
+  end
+
+  def to_s
+    # king = "\u265A".encode('utf-8')
+    case @color
+    when :red
+      " " + @icon.colorize(:red) + " "
+    when :black
+      " " + @icon.colorize(:black) + " "
+    when :null
+      "   "
+    end
   end
 
   # def inspect

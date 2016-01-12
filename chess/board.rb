@@ -15,7 +15,7 @@ class Board
         elsif row == 1 && column == 2
           self[[1,2]] = King.new([1,2], :red, self)
         else
-          self[[row,column]] = NullPiece.new
+          self[[row,column]] = NullPiece.new([row,column], :null, self)
         end
       end
     end

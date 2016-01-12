@@ -1,8 +1,9 @@
 load 'board.rb'
 load 'display.rb'
 load 'king.rb'
+load 'null.rb'
+load 'piece.rb'
 
 b = Board.new
 b.populate
 d = Display.new(b).render;
-d.render;
