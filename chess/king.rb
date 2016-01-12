@@ -6,7 +6,7 @@ class King < SteppingPiece
 
   def initialize(position, color, board)
     super(position, color, board)
-    @icon =  "\u265F".encode('utf-8')
+    @icon =  "\u265A".encode('utf-8')
   end
 
   MOVES = [

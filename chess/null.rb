@@ -8,13 +8,4 @@ class NullPiece < Piece
     @null = true
     @icon = " "
   end
-
-  # def inspect
-  #   "  "
-  # end
-
-  # def to_s
-  #   "   "
-  # end
-
 end
