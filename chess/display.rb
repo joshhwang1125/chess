@@ -1,3 +1,4 @@
+require_relative 'board'
 require 'colorize'
 require_relative "cursorable"
 
