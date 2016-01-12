@@ -1,4 +1,3 @@
-require_relative 'board'
 
 class Piece
   attr_accessor :null, :position
@@ -12,9 +11,9 @@ class Piece
     @null = false
   end
 
-  def inspect
-    puts "O"
-  end
+  # def inspect
+  #   #puts "O"
+  # end
 
   # def move_array
   #

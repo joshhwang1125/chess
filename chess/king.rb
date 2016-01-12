@@ -1,6 +1,5 @@
 require_relative 'stepping_piece'
-require_relative 'piece'
-require_relative 'board'
+# require_relative 'piece'
 
 
 class King < SteppingPiece
@@ -21,10 +20,14 @@ class King < SteppingPiece
     MOVES
   end
 
-  def inspect
-    puts "X"
+  def to_s
+    king = "\u265A"
+    case @color
+    when :red
+      " " + king.encode('utf-8').colorize(:red) + " "
+    when :black
+      " " + king.encode('utf-8').colorize(:black) + " "
+    end
   end
-
-
 
 end

@@ -1,4 +1,4 @@
-module cursorable
+module Cursorable
   KEYMAP = {
     " " => :space,
     "h" => :left,
