@@ -23,6 +23,4 @@ class Knight < SteppingPiece
     MOVES
   end
 
-
-
 end

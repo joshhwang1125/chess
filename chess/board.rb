@@ -6,7 +6,24 @@ class Board
   def initialize()
     @grid = Array.new(8) { Array.new(8) {nil} }
   end
-  #
+
+  def populate_test
+    8.times do |row|
+      8.times do |column|
+        if [row, column] == [0,3]
+          self[[row,column]] = King.new([row,column], :black, self)
+        elsif [row, column] == [1,4]
+          self[[row,column]] = Pawn.new([row,column], :red, self)
+        elsif [row, column] == [1,2]
+          self[[row,column]] = Pawn.new([row,column], :black, self)
+        else
+          self[[row,column]] = NullPiece.new([row,column], :null, self)
+        end
+      end
+    end
+
+  end
+
   def populate
     8.times do |row|
       8.times do |column|

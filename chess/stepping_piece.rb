@@ -20,8 +20,8 @@ class SteppingPiece < Piece
 
   end
 
-  def obstacle(valid_moves)
-    valid_moves.select do |pos|
+  def obstacle(inbound_moves)
+    valid_moves = inbound_moves.select do |pos|
       is_null_piece?(pos) || is_enemy?(pos)
     end
     valid_moves

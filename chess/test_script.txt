@@ -8,7 +8,16 @@ load 'queen.rb'
 load 'knight.rb'
 load 'null.rb'
 load 'piece.rb'
+load 'stepping_piece.rb'
 
 b = Board.new
-b.populate
+b.populate_test
+
+#test move_array
+king = b[[0,3]]
+king.move_array
+
+#render
 d = Display.new(b).render;
+
+[[0, 4], [0, 2], [1, 4], [1, 3], [1, 2]]
