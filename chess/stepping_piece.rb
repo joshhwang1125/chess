@@ -28,7 +28,7 @@ class SteppingPiece < Piece
     valid_moves
   end
 
-  def move_array
+  def move_array #perhaps break apart
     inbound_array = self.inbound_moves
     obstacle(inbound_array)
   end
