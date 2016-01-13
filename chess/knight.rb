@@ -7,7 +7,7 @@ class Knight < SteppingPiece
     @icon =  "\u265E".encode('utf-8')
   end
 
-  MOVES = [
+  STEPS = [
     [-2, -1],
     [-2,  1],
     [-1, -2],
@@ -19,8 +19,8 @@ class Knight < SteppingPiece
   ]
 
 
-  def moves
-    MOVES
+  def steps
+    STEPS
   end
 
 end

@@ -24,6 +24,21 @@ class Piece
     end
   end
 
+  def inspect
+    to_s
+  end
+
+  def inbound_move_array
+    inbound = []
+    curr_row, curr_column = @position
+    steps.each do |new_pos|
+      move_row, move_column = new_pos
+      new_row, new_col = curr_row + move_row, curr_column + move_column
+      inbound << [new_row, new_col] if new_row.between?(0, 7) && new_col.between?(0, 7)
+    end
+    inbound
+  end
+
   # def inspect
   #   #puts "O"
   # end
@@ -40,6 +55,6 @@ class Piece
   def is_enemy?(pos)
     @board[pos].color != @color
   end
-
+### Moves logic
 
 end

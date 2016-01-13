@@ -9,11 +9,11 @@ load 'knight.rb'
 load 'null.rb'
 load 'piece.rb'
 load 'stepping_piece.rb'
-
+load 'sliding_piece.rb'
 b = Board.new
 b.populate_test
 
-#test move_array
+
 king = b[[0,3]]
 king.move_array
 
