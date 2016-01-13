@@ -16,11 +16,11 @@ class Piece
     # king = "\u265A".encode('utf-8')
     case @color
     when :red
-      " " + @icon.colorize(:red) + " "
+      "  " + @icon.colorize(:red) + "  "
     when :black
-      " " + @icon.colorize(:black) + " "
+      "  " + @icon.colorize(:black) + "  "
     when :null
-      "   "
+      "     "
     end
   end
 

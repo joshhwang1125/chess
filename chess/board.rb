@@ -3,7 +3,7 @@ require_relative 'requirement_file'
 class Board
   attr_accessor :grid
 
-  def initialize()
+  def initialize
     @grid = Array.new(8) { Array.new(8) {nil} }
   end
 
@@ -23,7 +23,7 @@ class Board
         end
       end
     end
-
+    @board
   end
 
   def populate
@@ -58,7 +58,7 @@ class Board
         end
       end
     end
-
+    p @board
   end
 
   def [](pos)
