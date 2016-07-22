@@ -53,21 +53,21 @@ module Cursorable
   def read_char
     STDIN.echo = false
     STDIN.raw!
-    #what do these do? ask TA
 
     input = STDIN.getc.chr
     if input == "\e" then
       input << STDIN.read_nonblock(3) rescue nil
       input << STDIN.read_nonblock(2) rescue nil
     end
-    ensure
-      STDIN.echo = true
-      STDIN.cooked!
+  ensure
+    STDIN.echo = true
+    STDIN.cooked!
+
     return input
   end
 
   def update_pos(diff)
     new_pos = [@cursor_pos[0] + diff[0], @cursor_pos[1] + diff[1]]
-    @cursor_pos = new_pos if @board.in_bounds?(new_pos)
+    @cursor_pos = new_pos if @board.valid_pos?(new_pos)
   end
 end
